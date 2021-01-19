@@ -1,38 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+body {
+  background: #f5f4f4;
+  font-family: 'Open Sans', sans-serif, 'Noto Sans KR';
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.header {
+  background: #454545;
+  width: 100%;
+  height: 60px;
+}
+
+.header h1 {
+  color: #fcfcfc;
+  text-align: center;
+  font-size: 1.5rem;
+}
+section {
+  width: 100%;
+  height: 100vh;
+}
+section h2 {
+  text-align: center;
+  color: #464d52;
+  margin: 5;
+  font-size: 1.2rem;
+}
+
+section h3 {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #464d52;
+  opacity: 0.7;
+}
+
+.contents {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background: #fff;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-sizing: 0 0 20px 0 #eee;
+  border-style: solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(228, 228, 228, 0.3) 0%,
+    rgba(207, 207, 207, 0.5) 50%,
+    rgba(163, 163, 163, 0.5) 100%
+  );
+
+  border-image-slice: 1;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.containcard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+.title {
+  font-weight: 600;
+}
+.select {
+  text-align: center;
+  margin: 10px !important;
+}
+select {
+  height: 30px;
+  width: 130px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card1 {
+  color: #a11010;
+  border-bottom: 4px solid rgba(255, 0, 0, 0.5);
+}
+
+.card2 {
+  color: #268062;
+  border-bottom: 4px solid rgba(0, 255, 0, 0.5);
+}
+.card3 {
+  color: #353837;
+  border-bottom: 4px solid rgba(59, 58, 58, 0.5);
+}
+
+.sub-title {
+  font-size: 0.4rem;
+  font-weight: 500;
+}
+.footer {
+  margin: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 760px) {
+  section {
+    width: 100%;
+    height: 135vh;
   }
-  to {
-    transform: rotate(360deg);
+  .containcard {
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+  }
+  .card {
+    background: #fff;
+    margin: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-sizing: 0 0 10px 0 #eee;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  .footer {
+    margin: 40px;
   }
 }
